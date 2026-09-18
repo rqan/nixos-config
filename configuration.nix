@@ -27,7 +27,7 @@
 
   # Display Manager: SDDM Wayland
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = {
+  services.displayManager.sddm = {
 	enable = true;
 	wayland.enable = true;
 	theme = "silent";
