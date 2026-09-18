@@ -86,7 +86,17 @@
     XDG_SESSION_TYPE = "wayland";
     # XDG_CURRENT_DESKTOP diatur otomatis oleh masing-masing sesi compositor
   };  
-
+  
+  xdg.portal = {
+	enable = true;
+	wlr.enable = true;
+	extraPortals = [
+ 	pkgs.xdg-desktop-portal-hyprland
+	pkgs.xdg-desktop-portal-gtk
+	];
+	config.common.default = "*";
+  };
+	
   # Flakes & Experimental Features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
