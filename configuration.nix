@@ -27,9 +27,15 @@
 
   # Display Manager: SDDM Wayland
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
-  
+  services.displayManager.sddm.enable = {
+	enable = true;
+	wayland.enable = true;
+	theme = "silent";
+  services.displayManager.sddm.settings = {
+	Wayland = {
+	SessionDir = "usr/share/wayland-sessions";
+	};
+   };  
   # Tetapkan sesi default resmi NixOS ke Hyprland (UWSM)
   services.displayManager.defaultSession = "hyprland-uwsm";
   services.displayManager.sddm.settings = {
