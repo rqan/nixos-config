@@ -95,7 +95,7 @@
   # programs.mango.enable = false;
 
   # 2. Hyprland & Serpantinum Shell
-  # programs.serpantinum.enable = true;
+  programs.serpantinum.enable = true;
   programs.silentSDDM = {
     enable = true;
     theme = "rei";
