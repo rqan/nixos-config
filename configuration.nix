@@ -29,7 +29,7 @@
   services.xserver.enable = true;
   services.displayManager.sddm = {
 	enable = true;
-	wayland.enable = true;
+	wayland.enable = lib.mkForce true;
 	theme = "silent";
 	};
   services.displayManager.sddm.settings = {
