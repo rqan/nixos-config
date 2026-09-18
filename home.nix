@@ -11,8 +11,8 @@
  [
  foot
  quickshell
- wofi
- dolphin
+# wofi
+ #dolphin
  ];
  home.sessionVariables =
  {
