@@ -26,9 +26,9 @@
   time.timeZone = "Asia/Jakarta";
 
   # Display Manager: SDDM Wayland
-  services.xserver.enable = false;
+  services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  #services.displayManager.sddm.wayland.enable = true;
   
   # Tetapkan sesi default resmi NixOS ke Hyprland (UWSM)
   services.displayManager.defaultSession = "hyprland-uwsm";
@@ -85,10 +85,10 @@
 
   # Window Managers
   # 1. MangoWM (Desktop Utama Lama)
-  programs.mango.enable = true;
+  # programs.mango.enable = false;
 
   # 2. Hyprland & Serpantinum Shell
-  programs.serpantinum.enable = true;
+  # programs.serpantinum.enable = true;
   programs.silentSDDM = {
     enable = true;
     theme = "rei";
@@ -101,7 +101,7 @@
   };
 
   # 3. Niri (Infinite Canvas Desktop)
-  programs.niri.enable = true;
+  # programs.niri.enable = false;
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
@@ -120,7 +120,7 @@
     nodejs
     python3
 
-    inputs.silentSDDM.packages.${pkgs.system}.default
+   # inputs.silentSDDM.packages.${pkgs.system}.default
     quickshell
     matugen       # Generator warna Material You untuk Serpantinum
     qt6.qtwayland
