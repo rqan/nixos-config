@@ -31,6 +31,7 @@
 	enable = true;
 	wayland.enable = true;
 	theme = "silent";
+	};
   services.displayManager.sddm.settings = {
 	Wayland = {
 	SessionDir = "usr/share/wayland-sessions";
