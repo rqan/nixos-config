@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, serpantinum, ... }:
 
 {
   imports =
@@ -107,9 +107,6 @@
     xwayland.enable = true;
   };
 
-  # 3. Niri (Infinite Canvas Desktop)
-  # programs.niri.enable = false;
-
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
     git
@@ -126,7 +123,7 @@
     neovim
     nodejs
     python3
-
+    serpantinum.packages.${pkgs.system}.default
    # inputs.silentSDDM.packages.${pkgs.system}.default
     quickshell
     matugen       # Generator warna Material You untuk Serpantinum
