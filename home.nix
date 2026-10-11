@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, spicetify-nix, ... }:
 {
  home.username = "focarix";
  home.homeDirectory = "/home/focarix";
@@ -11,9 +11,9 @@
  [
  foot
  quickshell
-# wofi
- #dolphin
+ upscayl
  ];
+ 
  home.sessionVariables =
  {
  MOZ_ENABLE_WAYLAND = "1";
